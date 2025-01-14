@@ -30,7 +30,7 @@
   --code: #e51937;
   --preformatted: #444;
   --marked: #ffdd33;
-  --disabled: #efefef;
+  --disabled: #444444;
 }
 
 /* Dark theme */
@@ -46,7 +46,8 @@
     --accent-hover: #e2cc5e;
     --accent-text: var(--bg);
     --preformatted: #ccc;
-    --disabled: #251a06;
+    --marked: #ff3e24;
+    --disabled: #ffffff;
   }
   img,
   video {
@@ -190,6 +191,10 @@ mark.date {
 
 p.center {
   text-align: center;
+}
+
+blockquote {
+  font-weight: 100;
 }
 
 /* The following only applies to modal buttons/pop-ups based upon a Codepen by Jake (https://codepen.io/jak_e) */
