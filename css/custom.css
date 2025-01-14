@@ -14,7 +14,7 @@
   --sans-font: "mae-variable", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
     "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
-  --serif-font: "sole-serif-titling-variable", 'Times New Roman', Times, serif;
+  --serif-font: "sole-serif-small-variable", 'Times New Roman', Times, serif;
   --mono-font: Cascadia Mono, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --standard-border-radius: 10px;
 
@@ -39,7 +39,7 @@
   ::backdrop {
     color-scheme: dark;
     --bg: #212121;
-    --accent-bg: #2c2c2c;
+    --accent-bg: #2e2b3a;
     --text: #dcdcdc;
     --text-light: #ababab;
     --accent: #ffe774;
@@ -57,17 +57,23 @@
 
 /* Modification to Simple.CSS elements */
 body {
-  font-family: var(--sans-font);
-  font-variation-settings: "wght" 400;
+  font-family: var(--serif-font);
+  font-variation-settings: "wght" 300, "opsz" 500;
   grid-template-columns: 1fr min(55rem, 90%) 1fr;
+  font-size: 1.15rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--serif-font);
+h1, h2, h3, h4, h5, h6, nav, footer, mark.date {
+  font-family: var(--sans-font);
+}
+
+nav a {
+  font-variation-settings: "wght" 500;
+  font-variant: small-caps;
 }
 
 h1 {
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "wght" 500;
   font-size: 3.25rem;
 }
 
@@ -78,7 +84,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  font-variation-settings: "wght" 200;
+  font-variation-settings: "wght" 300;
   margin-bottom: 0.5rem;
 }
 
@@ -180,21 +186,26 @@ section {
   margin: 2rem 0;
 }
 
+mark {
+  white-space: nowrap;
+}
+
 mark.date {
-  font-style: italic;
-  padding: 0.25rem 1rem;
+  padding: 0.35rem 1rem;
   opacity: 0.75;
   background-color: var(--marked);
   color: var(--disabled);
-  font-size: 0.9em;
+  font-size: 1rem;
+  font-variation-settings: "wght" 400;
+  font-variant: small-caps;
 }
 
-p.center {
+.center {
   text-align: center;
 }
 
-blockquote {
-  font-weight: 100;
+footer {
+  font-family: var(--sans-font);
 }
 
 /* The following only applies to modal buttons/pop-ups based upon a Codepen by Jake (https://codepen.io/jak_e) */
