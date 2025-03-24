@@ -1,12 +1,11 @@
 /*  Title: Primary Stylesheet for quapawlanguage.org
     Author: Tehya Deardorff (R&D - Quapaw Nation Language Department)
     Created: 09/09/2024
-    Last Updated: 10/21/2024
+    Last Updated: 03/24/2025
     Notes: Credit to other authors given in comments throughout the sheet.
     This stylesheet is built upon Simple.CSS by Kevquirk */
 
 /* Modifications to Simple.CSS global variables */
-/* Global variables. */
 
 :root,
 ::backdrop {
@@ -16,7 +15,7 @@
     "Helvetica Neue", sans-serif;
   --serif-font: sole-serif-titling-variable, 'Times New Roman', Times, serif;
   --mono-font: Cascadia Mono, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  --standard-border-radius: 10px;
+  --standard-border-radius: 12px;
 
   /* Default (light) theme */
   --bg: #eeeeee;
@@ -25,10 +24,10 @@
   --text-light: #585858;
   --border: #828aad;
   --accent: #00529b;
-  --accent-hover: #60b6e6;
+  --accent-hover: #52a6d3;
   --accent-text: var(--bg);
   --code: #e51937;
-  --preformatted: #444;
+  --preformatted: #e4e9ff;
   --marked: #ffdd33;
   --disabled: #444444;
 }
@@ -45,8 +44,9 @@
     --accent: #ffe774;
     --accent-hover: #e2cc5e;
     --accent-text: var(--bg);
-    --preformatted: #ccc;
+    --preformatted: #4a5377;
     --marked: #e51937;
+    --code: #229759;
     --disabled: #ffffff;
   }
   img,
@@ -60,7 +60,7 @@ body {
   font-family: var(--serif-font);
   font-variation-settings: "wght" 300, "opsz" 300;
   grid-template-columns: 1fr min(55rem, 90%) 1fr;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6, nav, footer, mark.date {
@@ -73,22 +73,22 @@ nav a {
 
 h1 {
   font-variation-settings: "wght" 500;
-  font-size: 3.25rem;
+  font-size: 2.75rem;
 }
 
 h2 {
   font-variation-settings: "wght" 400;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 h3, h4, h5, h6 {
   font-variation-settings: "wght" 300;
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0;
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 h4, h5, h6 {
@@ -100,23 +100,36 @@ strong, figcaption {
 }
 
 header {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   background: linear-gradient(90deg, rgba(0,82,155,1) 0%, rgba(229,25,55,1) 100%);
   color: whitesmoke;
 }
 
 header:first-child {
-  padding-top: 1em;
+  padding-top: 0.75rem;
+}
+
+header > nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 header > nav a,
 header > nav a:visited {
-  margin: 0 0.5rem 1rem 0.5rem;
-  border: 1px solid var(--border);
-  padding: .1rem 1.25em;
+  margin: 0;
+  border: 2px solid var(--border);
+  padding: 0 1rem;
   font-size: 1.25rem;
   text-decoration: none;
-  background: var(--accent-bg);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--preformatted);
+  font-family: var(--mono-font);
 }
 
 header > nav a:hover,
@@ -164,11 +177,8 @@ details > summary {
 
 article {
   background: var(--accent-bg);
-  padding: 1rem 2rem;
-}
-
-article > p {
-  margin-top: .5rem;
+  padding: 1rem 2rem 0 2rem;
+  margin: 2rem auto;
 }
 
 body > footer {
@@ -181,8 +191,15 @@ a.top-btn {
 }
 
 section {
-  padding: 0.5rem 1rem;
-  margin: 2rem 0;
+  padding: 0.75rem 1rem;
+}
+
+section {
+  border-bottom-width: 2px;
+}
+
+section:last-child {
+  margin-bottom: inherit;
 }
 
 mark {
@@ -193,13 +210,14 @@ mark {
 }
 
 mark.date {
-  padding: 0.4rem 1rem;
-  opacity: 0.75;
+  font-family: var(--mono-font);
+  opacity: 0.8;
+  line-height: 1;
+  padding: 0 8px 1px 8px;
   background-color: var(--marked);
   color: var(--disabled);
   font-size: 1rem;
   font-variation-settings: "wght" 400;
-  font-variant: small-caps;
 }
 
 .center {
