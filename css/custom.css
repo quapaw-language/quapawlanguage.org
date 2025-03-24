@@ -46,7 +46,7 @@
     --accent-hover: #e2cc5e;
     --accent-text: var(--bg);
     --preformatted: #ccc;
-    --marked: #ff3e24;
+    --marked: #e51937;
     --disabled: #ffffff;
   }
   img,
@@ -177,7 +177,7 @@ body > footer {
 
 a.top-btn {
   text-align: center;
-  display:block;
+  display: block;
 }
 
 section {
@@ -186,7 +186,10 @@ section {
 }
 
 mark {
+  color: var(--text);
   white-space: nowrap;
+  line-height: inherit;
+  padding: 3px 5px 0 5px;
 }
 
 mark.date {
