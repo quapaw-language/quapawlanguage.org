@@ -65,6 +65,9 @@
     </header>
 
     <main>
+      <p class="notice">
+        🏗️🚧 This page is a work in progress! Please mind our construction. 😊 
+      </p>
       <section>
         <h2>Write & Copy Text in Quapaw</h2>
         <p>
@@ -79,20 +82,18 @@
         <p>
           Click the
           <mark>Copy Text</mark> button below the field to copy the contents to
-          your device's clipboard.
+          your device's clipboard; the <mark>Clear Field</mark> button will empty the field of any typed text.
         </p>
 
         <textarea
+          id="field"
           name="anytext"
           class="text-area use-keyboard-input"
           placeholder="Click me!"
-        >
-        </textarea>
+        ></textarea>
         <script src="/js/keyboard.js"></script>
-
-        <p class="notice">
-          🏗️🚧 This page is a work in progress! Please mind our construction. 😊
-        </p>
+        <button onclick="copyText()">Copy Text</button>
+        <button onclick="clearField()">Clear Field</button>
       </section>
     </main>
 
