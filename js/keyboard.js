@@ -270,7 +270,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	Keyboard.init();
 });
 
-// Button to Copy Inputted Text from Keyboard
+// Button to copy contents of the text field to device clipboard
 function copyText() {
 	// Retrieve text field as variable
 	var copyText = document.getElementById("field");
