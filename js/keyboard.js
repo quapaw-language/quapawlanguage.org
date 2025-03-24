@@ -32,7 +32,8 @@ const Keyboard = {
 			"x",
 			"o",
 			"p",
-			"caps",
+			"ʰ",
+			"acute",
 			"a",
 			"š",
 			"d",
@@ -43,6 +44,7 @@ const Keyboard = {
 			"ǫ",
 			"ž",
 			"enter",
+			"caps",
 			"ą",
 			"s",
 			"ɣ",
@@ -127,7 +129,7 @@ const Keyboard = {
 
 		this.properties.keyLayout.forEach((key) => {
 			const insertLineBreak =
-				["backspace", "p", "enter", "?"].indexOf(key) !== -1;
+				["backspace", "acute", "enter", "?"].indexOf(key) !== -1;
 
 			switch (key) {
 				case "backspace":
@@ -138,6 +140,18 @@ const Keyboard = {
 								this.properties.value.slice(0, -1);
 							this._updateValueInTarget();
 						});
+					break;
+
+				case "acute":
+					this._createKeyBtn("`");
+					this.keyElement
+					  .addEventListener(
+							"click",
+							() => {
+								this.properties.value =
+								  this.properties.value.slice() + '\u0301';
+									this._updateValueInTarget();
+							});
 					break;
 
 				case "caps":
