@@ -172,7 +172,11 @@ aside figcaption {
 
 details > summary {
   font-family: var(--serif-font);
-  
+}
+
+details iframe {
+  width: 100%;
+  min-height: 500px;
 }
 
 article {
@@ -226,6 +230,11 @@ mark.date {
 
 footer {
   font-family: var(--sans-font);
+}
+
+ul, ol {
+  padding-top: inherit;
+  padding-bottom: 0.5em;
 }
 
 /* The following only applies to modal buttons/pop-ups based upon a Codepen by Jake (https://codepen.io/jak_e) */
