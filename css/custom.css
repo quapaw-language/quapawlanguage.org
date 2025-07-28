@@ -228,6 +228,15 @@ mark.date {
   text-align: center;
 }
 
+.guide-table a {
+  text-decoration: none;
+}
+
+.guide-table tr > td:first-of-type, .guide-table tr > td:last-of-type {
+  text-align: center;
+  font-weight: bold;
+}
+
 footer {
   font-family: var(--sans-font);
 }
